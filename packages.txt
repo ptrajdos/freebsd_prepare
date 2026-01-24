@@ -54,3 +54,4 @@ python312
 python313
 py311-glances
 neofetch
+7-zip
