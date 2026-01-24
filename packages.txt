@@ -68,3 +68,4 @@ ninja
 autoconf
 automake
 m4
+meson

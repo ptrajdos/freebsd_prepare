@@ -86,3 +86,11 @@ install_jenv:
 		echo "jEnv already configured in $(BASHRC)"; \
 	fi
 	@echo "Installation complete. Reload your shell or run 'source $(BASHRC)' to activate jEnv."
+
+tmux_bash: bash_all
+	@grep -q 'default-shell /usr/local/bin/bash' ~/.tmux.conf || \
+		echo 'set-option -g default-shell /usr/local/bin/bash' >> ~/.tmux.conf
+	@grep -q 'default-command /usr/local/bin/bash' ~/.tmux.conf || \
+		echo 'set-option -g default-command /usr/local/bin/bash' >> ~/.tmux.conf
+	@tmux source-file ~/.tmux.conf 2>/dev/null || true
+	@echo "bash configured as tmux default shell"
