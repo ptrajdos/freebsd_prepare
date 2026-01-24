@@ -27,7 +27,10 @@ install_packages:
 
 
 zerotier:
-	curl -s https://install.zerotier.com | sudo bash
+	sudo pkg install -y zerotier
+	sudo sysrc zerotier_enable="YES"
+	sudo service zerotier start
+
 
 
 $(ASDF_DIR): install_packages git_cfg
