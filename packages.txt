@@ -57,3 +57,14 @@ neofetch
 7-zip
 boost-all
 llvm14
+openjdk19
+openjdk24
+openjdk25
+py311-pythran
+openblas
+lapack
+pkgconf
+ninja
+autoconf
+automake
+m4
