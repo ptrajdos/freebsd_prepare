@@ -1,5 +1,4 @@
 bash-completion
-bc
 gcc
 gmake
 cmake
@@ -11,7 +10,6 @@ gnupg
 htop
 libffi
 gdbm
-xz
 ncurses
 nss
 pocl
@@ -27,23 +25,18 @@ mc
 moreutils
 mpich
 nano
-net-tools
 ninja
 nmap
 opencl
 scala
-shellcheck
 sl
 tig
-tk
 tree
 unzip
-e2fsprogs-libuuid
 vim
 wget
 xorg-vfbserver
 zip
-zlib
 R
 octave
 ffmpeg

@@ -23,7 +23,7 @@ git_cfg:
 install_packages:
 	sudo pkg update
 	sudo pkg upgrade -y
-	sudo xargs -a ${PACKAGES_FILE} -y pkg install
+	sudo  pkg install -y $$(grep -Ev '^\s*(#|$$)' $(PACKAGES_FILE))
 
 
 zerotier:
