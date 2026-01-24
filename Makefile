@@ -4,7 +4,9 @@ PACKAGES_FILE=${ROOTDIR}/packages.txt
 BASH_PROFILE := $(HOME)/.bash_profile
 BASHRC := $(HOME)/.bashrc
 
+
 ASDF_DIR= $(HOME)/.asdf
+JENV_DIR := $(HOME)/.jenv
 PYTHON=python
 PIP=pip
 ASDF_BIN := $(ASDF_DIR)/bin/asdf
@@ -67,3 +69,20 @@ bash_profile:
 	@echo "Done! ~/.bash_profile created."
 
 bash_all: install_packages bash_default bash_profile
+
+install_jenv:
+	@echo "Installing jEnv..."
+	@if [ ! -d "$(JENV_DIR)" ]; then \
+		git clone https://github.com/jenv/jenv.git $(JENV_DIR); \
+	else \
+		echo "jEnv already installed in $(JENV_DIR)"; \
+	fi
+	@echo "Configuring shell profile to initialize jEnv..."
+	@if ! grep -q 'export PATH="$HOME/.jenv/bin:$$PATH"' $(BASHRC); then \
+		echo 'export PATH="$(JENV_DIR)/bin:$$PATH"' >> $(BASHRC); \
+		echo 'eval "$$($(JENV_DIR)/bin/jenv init -)"' >> $(BASHRC); \
+		echo "Added jEnv initialization to $(BASHRC)"; \
+	else \
+		echo "jEnv already configured in $(BASHRC)"; \
+	fi
+	@echo "Installation complete. Reload your shell or run 'source $(BASHRC)' to activate jEnv."

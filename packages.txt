@@ -55,3 +55,5 @@ python313
 py311-glances
 neofetch
 7-zip
+boost-all
+llvm14
