@@ -50,3 +50,6 @@ bash
 byobu 
 tmux
 screen
+python312
+python313
+py311-glances
