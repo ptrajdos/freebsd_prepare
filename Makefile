@@ -1,6 +1,8 @@
 ROOTDIR=$(realpath $(dir $(firstword $(MAKEFILE_LIST))))
 PACKAGES_FILE=${ROOTDIR}/packages.txt
 
+BASH_PROFILE := $(HOME)/.bash_profile
+BASHRC := $(HOME)/.bashrc
 
 ASDF_DIR= $(HOME)/.asdf
 PYTHON=python
@@ -52,4 +54,16 @@ asdf_install_python: asdf_plugins
 	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.9.18 || true'
 	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  global python 3.11.9 || true'
 
-	
+bash_default: install_packages
+	chsh -s /usr/local/bin/bash
+
+bash_profile:
+	@echo "Creating ~/.bash_profile that sources ~/.bashrc..."
+	@mkdir -p $(HOME)
+	@echo '# ~/.bash_profile - automatically sources ~/.bashrc' > $(BASH_PROFILE)
+	@echo 'if [ -f "$(BASHRC)" ]; then' >> $(BASH_PROFILE)
+	@echo '    . "$(BASHRC)"' >> $(BASH_PROFILE)
+	@echo 'fi' >> $(BASH_PROFILE)
+	@echo "Done! ~/.bash_profile created."
+
+bash_all: install_packages bash_default bash_profile
