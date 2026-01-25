@@ -57,6 +57,8 @@ neofetch
 7-zip
 boost-all
 llvm14
+llvm15
+llvm16
 llvm20
 openjdk19
 openjdk24
