@@ -72,3 +72,4 @@ autoconf
 automake
 m4
 meson
+py311-matplotlib
