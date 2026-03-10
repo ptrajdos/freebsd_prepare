@@ -78,3 +78,4 @@ btop
 rust
 bison
 flex
+libtool
