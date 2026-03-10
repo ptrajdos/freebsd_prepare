@@ -75,3 +75,4 @@ meson
 py311-matplotlib
 sendxmpp
 btop
+rust
