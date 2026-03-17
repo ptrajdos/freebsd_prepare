@@ -52,14 +52,16 @@ asdf_plugins: $(ASDF_DIR)
 	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN) plugin add java || true'
 
 asdf_install_python: asdf_plugins
-	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.11.9 || true'
-	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.9.18 || true'
+	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.11.15 || true'
+	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.9.25 || true'
 	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.13.12 || true'
+	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.10.20 || true'
 	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.13.12t || true'
+	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  install python 3.12.13 || true'
 	bash -c '. $(ASDF_DIR)/asdf.sh && LDFLAGS="-lkvm" $(ASDF_BIN)  install python 3.14.3 || true'
 	bash -c '. $(ASDF_DIR)/asdf.sh && LDFLAGS="-lkvm"  $(ASDF_BIN)  install python 3.14.3t || true'
 
-	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  global python 3.11.9 || true'
+	bash -c '. $(ASDF_DIR)/asdf.sh && $(ASDF_BIN)  global python 3.11.15 || true'
 	#LDFLAGS="-lkvm"
 
 bash_default: install_packages
