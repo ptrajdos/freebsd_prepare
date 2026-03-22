@@ -21,6 +21,11 @@
  export OBJDUMP=/usr/local/bin/objdump
  export RANLIB=/usr/local/bin/ranlib
 
+ #
+ export CFLAGS="-fno-lto"
+ export CXXFLAGS="-fno-lto"
+ export LDFLAGS="-fno-lto"
+
  # 4. Print confirmation to the terminal
  echo "=========================================="
  echo " Toolchain switched to GCC + GNU Binutils "
