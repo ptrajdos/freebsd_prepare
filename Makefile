@@ -78,6 +78,9 @@ bash_profile:
 
 bash_all: install_packages bash_default bash_profile
 
+certs: bash_all
+	@echo 'export SSL_CERT_FILE=/usr/local/share/certs/ca-root-nss.crt' >> ${BASHRC}
+
 install_jenv:
 	@echo "Installing jEnv..."
 	@if [ ! -d "$(JENV_DIR)" ]; then \
