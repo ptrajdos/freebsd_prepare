@@ -79,3 +79,4 @@ rust
 bison
 flex
 libtool
+ca_root_nss
