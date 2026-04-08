@@ -80,3 +80,9 @@ bison
 flex
 libtool
 ca_root_nss
+gawk
+mawk
+nawk
+gindent
+netpbm
+gettext
