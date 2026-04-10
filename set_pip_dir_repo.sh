@@ -1,1 +1,1 @@
-export PIP_FIND_LINKS="/opt/my_wheels"
+export PIP_FIND_LINKS="/usr/local/share/my_wheels"
