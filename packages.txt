@@ -86,3 +86,4 @@ nawk
 gindent
 netpbm
 gettext
+go
