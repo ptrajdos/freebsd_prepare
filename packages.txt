@@ -87,3 +87,4 @@ gindent
 netpbm
 gettext
 go
+ruby 
