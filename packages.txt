@@ -64,6 +64,7 @@ openjdk11
 openjdk19
 openjdk24
 openjdk25
+openjdk26
 py311-pythran
 openblas
 lapack
