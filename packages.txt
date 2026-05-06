@@ -89,3 +89,4 @@ gettext
 go
 ruby
 uv
+maven
