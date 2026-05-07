@@ -97,3 +97,4 @@ dia
 texlive-full
 plantuml
 poppler-utils
+xdg-utils
