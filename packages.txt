@@ -93,3 +93,7 @@ ruby
 uv
 maven
 ImageMagick7
+dia
+texlive-full
+plantuml
+poppler-utils
