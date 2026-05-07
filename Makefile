@@ -81,7 +81,7 @@ bash_all: install_packages bash_default bash_profile
 certs: bash_all
 	@echo 'export SSL_CERT_FILE=/usr/local/share/certs/ca-root-nss.crt' >> ${BASHRC}
 
-install_jenv:
+install_jenv: ensure-procfs-fstab
 	@echo "Installing jEnv..."
 	@if [ ! -d "$(JENV_DIR)" ]; then \
 		git clone https://github.com/jenv/jenv.git $(JENV_DIR); \
@@ -105,3 +105,7 @@ tmux_bash: bash_all
 		echo 'set-option -g default-command /usr/local/bin/bash' >> ~/.tmux.conf
 	@tmux source-file ~/.tmux.conf 2>/dev/null || true
 	@echo "bash configured as tmux default shell"
+
+ensure-procfs-fstab:
+	@grep -qE '^[[:space:]]*proc[[:space:]]+/proc[[:space:]]+procfs' /etc/fstab || \
+	echo 'proc    /proc           procfs          rw      0       0' | sudo tee -a /etc/fstab > /dev/null

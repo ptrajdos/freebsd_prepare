@@ -92,3 +92,4 @@ go
 ruby
 uv
 maven
+ImageMagick7
