@@ -109,3 +109,6 @@ tmux_bash: bash_all
 ensure-procfs-fstab:
 	@grep -qE '^[[:space:]]*proc[[:space:]]+/proc[[:space:]]+procfs' /etc/fstab || \
 	echo 'proc    /proc           procfs          rw      0       0' | sudo tee -a /etc/fstab > /dev/null
+
+install_drawio:
+	$(MAKE) -C  /usr/ports/graphics/drawio install clean
