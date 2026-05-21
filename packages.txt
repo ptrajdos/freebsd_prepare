@@ -98,3 +98,11 @@ plantuml
 poppler-utils
 xdg-utils
 git-lfs
+py311-pybind11
+pybind11-json
+pybind11_abseil
+pybind11_protobuf
+py311-cython
+py312-cython
+py313-cython
+py314-cython
