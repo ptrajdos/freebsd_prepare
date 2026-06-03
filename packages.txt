@@ -106,3 +106,4 @@ py311-cython
 py312-cython
 py313-cython
 py314-cython
+coreutils
