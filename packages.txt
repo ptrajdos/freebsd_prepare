@@ -60,6 +60,8 @@ llvm14
 llvm15
 llvm16
 llvm20
+llvm21
+llvm22
 openjdk11
 openjdk24
 openjdk25
