@@ -111,3 +111,4 @@ py314-cython
 coreutils
 rsync 
 minicom
+nnn
