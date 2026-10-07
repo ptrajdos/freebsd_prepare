@@ -112,3 +112,4 @@ coreutils
 rsync 
 minicom
 nnn
+bash-completion

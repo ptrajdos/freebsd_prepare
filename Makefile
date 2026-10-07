@@ -112,3 +112,12 @@ ensure-procfs-fstab:
 
 install_drawio:
 	$(MAKE) -C  /usr/ports/graphics/drawio install clean
+setup-bash-completion:
+	@grep -qF '/usr/local/share/bash-completion/bash_completion' ~/.bashrc || \
+	{ \
+		echo '' >> ~/.bashrc; \
+		echo '# bash-completion' >> ~/.bashrc; \
+		echo 'if [ -r /usr/local/share/bash-completion/bash_completion ]; then' >> ~/.bashrc; \
+		echo '    source /usr/local/share/bash-completion/bash_completion' >> ~/.bashrc; \
+		echo 'fi' >> ~/.bashrc; \
+	}
